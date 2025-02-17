@@ -1,101 +1,157 @@
-import Image from "next/image";
+import React from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import PerformanceManagement from './PerformanceManagement';
+import DNAHeader from '@/DNAHeader';
+import TestimonialSection from './TestimonialSection';
+import VideoCarousel from './VideoCarousel';
 
-export default function Home() {
+const HRLandingPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="text-sm text-gray-600">Health DNA Test + Wellness Plans</div>
+            <h1 className="text-4xl lg:text-5xl font-bold mt-4 mb-6">
+              Deliver exceptional employee experiences
+            </h1>
+            <p className="text-gray-600 mb-8">
+              The world of work is changing rapidly and so should your HR practices.
+              webseeder People is a cloud-based HR software crafted to nurture employees,
+              quickly adapt to changes, and make HR management agile and effective.
+            </p>
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium">
+              REQUEST DEMO
+            </button>
+          </div>
+          <div className="relative">
+            <img 
+              src="employee.png" 
+              alt="HR Dashboard" 
+              className="w-full rounded-lg shadow-lg"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Core HR Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Core HR simplified</h2>
+              <p className="text-gray-600 mb-6">
+                Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. 
+                Get smarter and more efficient software with features designed to free 
+                you from administrative work.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <p>An employee database that scales</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <p>Efficient employee case management</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <p>Smart HR workflows</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                  <p>Insightful analytics</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="space-y-4">
+                {/* Sample employee cards */}
+                <div className="flex items-center gap-4 p-4 border rounded-lg">
+                  <img src="hr.png" alt="Employee"  />
+                  <div>
+                    {/* <p className="font-medium">Emma Carter</p> */}
+                    {/* <p className="text-sm text-gray-500">emma.carter@example.com</p> */}
+                  </div>
+                  <div className="ml-auto">
+                    {/* <span className="text-sm text-gray-500">California</span> */}
+                  </div>
+                </div>
+                {/* Add more employee cards as needed */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Time and Attendance Section */}
+      <section className="container mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Optimise your time and attendance
+        </h2>
+        <p className='flex items-center justify-center text-center'>Spend less time tracking time and days off. Webseeder People's time and attendance system lets you focus <br/> on employee productivity while accurately tracking work hours and providing error-free reporting.</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="relative">
+            <img 
+              src="girl.png" 
+              alt="Time tracking" 
+              className="w-[500px] rounded-lg h-[550px]"
+            />
+          </div>
+          <div className="space-y-4">
+            <div className="bg-orange-50 p-4 rounded-lg">
+              <h3 className="font-medium">Track attendance with ease</h3>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-medium">Schedule shifts effortlessly</h3>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="font-medium">Track days off efficiently</h3>
+            </div>
+            <div className="bg-purple-50 p-4 rounded-lg">
+              <h3 className="font-medium">Convert time to timesheets</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Management Section */}
+
+      <PerformanceManagement/>
+      <DNAHeader/>
+      <TestimonialSection/>
+
+      <img src='trust.png' alt='picc'/>
+
+      <VideoCarousel/>
+     
+
+      {/* CTA Section */}
+      <section className="bg-blue-200 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">
+            Provide an HR experience that your employees will love.
+          </h2>
+          <div className="max-w-md mx-auto">
+            <div className="flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter Your Email Here"
+                className="flex-1 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">
+                SIGN UP
+              </button>
+            </div>
+            <p className="text-sm text-gray-600 mt-4">
+              30 day free trial. No credit card required.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default HRLandingPage;
