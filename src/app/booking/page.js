@@ -100,14 +100,15 @@ const SchedulingApp = () => {
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">Join 12 million users</h2>
               <p className="text-gray-600">who grow their business with webseeder</p>
-              <div className="flex gap-4">
-                <button className="bg-black text-white px-6 py-3 rounded-md">
-                  Start for free
-                </button>
-                <button className="border border-gray-300 px-6 py-3 rounded-md">
-                  Talk to sales
-                </button>
-              </div>
+              <div className="flex flex-col md:flex-row gap-4">
+  <button className="bg-black text-white px-6 py-3 rounded-md w-full md:w-auto">
+    Start for free
+  </button>
+  <button className="border border-gray-300 px-6 py-3 rounded-md w-full md:w-auto">
+    Talk to sales
+  </button>
+</div>
+
             </div>
             <div className="flex items-center gap-6">
               <img src='banner.png' alt='picc'/>
