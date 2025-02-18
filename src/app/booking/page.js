@@ -31,7 +31,10 @@ const SchedulingApp = () => {
         </div>
       </section>
 
-      <img src='tablo.png' alt='picc' className='w-full h-[1406px] mx-auto sm:h-auto sm:w-auto]'/>
+      <img src="tablo.png" 
+     alt="picc" 
+     className="w-full h-auto mx-auto max-w-screen-lg sm:w-auto sm:max-h-[80vh] object-contain" />
+
 
       {/* Second Section - Features Grid */}
       <section className="bg-gray-900 py-16">
