@@ -4,7 +4,7 @@ import React from "react";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section ////*/}
+      {/* Hero Section*/}
       <section className="container mx-auto px-4 py-16 flex flex-col-reverse lg:flex-row items-center justify-between">
         {/* Left Content */}
         <div className="max-w-2xl text-center lg:text-left">
