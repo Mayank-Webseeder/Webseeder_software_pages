@@ -25,15 +25,20 @@ const SchedulingApp = () => {
             <img 
               src="appoinment.png" 
               alt="Scheduling Interface" 
-              className="w-[501px] h-[473px] ml-[77px] mb-2 rounded-lg shadow-lg"
+              className="w-[501px] h-[473px]  mb-2 rounded-lg shadow-lg "
             />
           </div>
         </div>
       </section>
 
-      <img src="tablo.png" 
-     alt="picc" 
-     className="w-full h-auto mx-auto max-w-screen-lg sm:w-auto sm:max-h-[80vh] object-contain" />
+      <div class="flex items-center justify-center h-screen">
+    <img src="tablo.png" 
+         alt="picc" 
+         class="w-full max-w-[90%] sm:max-w-md md:max-w-lg lg:max-w-screen-lg h-auto object-contain mr-6" />
+</div>
+
+
+
 
 
       {/* Second Section - Features Grid */}
