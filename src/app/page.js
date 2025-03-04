@@ -2,23 +2,33 @@
 
 import Link from "next/link";
 
+const links = [
+  { href: "/payrolllanding", label: "Payroll Landing" },
+  { href: "/todolanding", label: "Todo Landing" },
+  { href: "/recruitmentlanding", label: "Recruitment Landing" },
+  { href: "/invoicelanding", label: "Invoice Landing" },
+  { href: "/expenselanding", label: "Expense Landing" },
+  { href: "/crmlanding", label: "CRM Landing" },
+  { href: "/formslanding", label: "Forms Landing" },
+  { href: "/surveylanding", label: "Survey Landing" },
+  { href: "/inventorylanding", label: "Inventory" },
+];
 
 export default function Home() {
-  return( 
-     <div>
-      <ul>
-        <Link href="/payrolllanding"><li> PayrollLanding</li></Link>
-        <Link href="/todolanding"><li> Todolanding</li></Link>
-        <Link href="/recruitmentlanding"><li> RecruitLanding</li></Link>
-        <Link href="/invoicelanding"><li> invoicelanding</li></Link>
-        <Link href="/expenselanding"><li> expenceLanding</li></Link>
-        <Link href="/crmlanding"><li> CrmLanding</li></Link>
-        <Link href="/formslanding"><li> Formslanding</li></Link>
-        <Link href="/surveylanding"><li> Surveylanding</li></Link>
-        <Link href="/inventorylanding"><li> inventory</li></Link>
-
-
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <ul className="bg-white p-6 rounded-2xl shadow-lg space-y-2 w-72">
+        {links.map((link, index) => (
+          <li key={index} className="text-center">
+            <Link
+              href={link.href}
+              className="block py-2 text-lg font-semibold text-gray-700 hover:text-blue-600 transition"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
-
-   </div>);
+    </div>
+  );
 }
